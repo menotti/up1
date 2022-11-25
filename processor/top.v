@@ -1,7 +1,7 @@
 module up_tb;
-  logic clock, reset, we;
-  logic [7:0] address, ir, pc;
-  wire [7:0] data;
+  reg clock, reset;
+  wire we;
+  wire [7:0] address, ir, pc, data;
   
   uP proc(clock, reset, data, we, address, pc, ir);
 //  mem #("fibo.hex") ram(clock, we, address, data); 
@@ -11,7 +11,7 @@ module up_tb;
     begin
       $dumpfile("dump.vcd"); $dumpvars(0);
       reset <= 1; #22; reset <= 0;
-      #5000; $stop;
+      #5000; $finish;
     end
 
   always

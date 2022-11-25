@@ -3,7 +3,7 @@ module mem #(parameter filename = "ram.hex")
            input [7:0] address,
            inout [7:0] data);
 
-  logic [7:0] RAM[255:0];
+  reg [7:0] RAM[0:255];
 
   initial
     // $readmemh(filename, RAM); //Hex file

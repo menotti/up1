@@ -4,10 +4,9 @@ module uP(
   output logic we,
   output logic [7:0] mar, pc, ir);
   
-  typedef enum logic [1:0] {FETCH, DECODE, EXECUTE} statetype;
-  statetype state, nextstate;
-  
-  logic [7:0] acc;
+  parameter FETCH = 0, DECODE = 1, EXECUTE = 2;
+  reg [1:0] state, nextstate;
+  reg [7:0] acc;
   
   always @(posedge clock or posedge reset)
   begin
@@ -41,8 +40,8 @@ module uP(
     end
   end
   
-  always_comb
-    casex(state)
+  always @(*)
+    case(state)
       FETCH:   nextstate = DECODE;
       DECODE:  nextstate = EXECUTE;
       EXECUTE: nextstate = FETCH;
