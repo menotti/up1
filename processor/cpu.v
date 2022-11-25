@@ -7,6 +7,11 @@ module uP(
   parameter FETCH = 0, DECODE = 1, EXECUTE = 2;
   reg [1:0] state, nextstate;
   reg [7:0] acc;
+
+  initial begin
+    $display("time acc  pc  ir mar mbr we");
+    $monitor("%4d %3d %3d %3d %3d %3d %b", $time, acc, pc, ir, mar, mbr, we);
+  end
   
   always @(posedge clock or posedge reset)
   begin
