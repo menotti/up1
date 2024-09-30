@@ -5,6 +5,7 @@ to_binary = lambda x: x >= 0 and str(bin(x))[2:] or "-" + str(bin(x))[3:]
 is_l_command = lambda i : i.find(':') != -1 # labels ends with ':' 
 is_a_command = lambda i : i.find(' ') == 0 or i.find('\t') == 0 # assembly commands must be indented (further removed)
 is_d_command = lambda i : i.find('.') == 0 # data variables starts with '.'
+is_hex = lambda i : i.find('0x') == 0 # Hexadecimal 
 
 #attempts to parse an integer
 def try_parse_int(s, base=10, val=None):
