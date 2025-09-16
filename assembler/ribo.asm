@@ -8,7 +8,7 @@ loop: # infinite...
 	STORE b
 	LOAD c
 	STORE a
-	JUMP loop
+	JNZ loop
 
 # variables 
 .a 144
