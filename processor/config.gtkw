@@ -1,0 +1,29 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Fri Nov 25 11:50:26 2022
+[*]
+[dumpfile] "/home/menotti/Workspace/up1/processor/dump.vcd"
+[dumpfile_mtime] "Fri Nov 25 11:49:08 2022"
+[dumpfile_size] 43124
+[savefile] "/home/menotti/Workspace/up1/processor/config.gtkw"
+[timestart] 0
+[size] 1920 1016
+[pos] -51 -51
+*-6.322560 150 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] up_tb.
+[sst_width] 223
+[signals_width] 126
+[sst_expanded] 1
+[sst_vpaned_height] 286
+@28
+up_tb.reset
+up_tb.clock
+@22
+up_tb.address[7:0]
+up_tb.data[7:0]
+up_tb.pc[7:0]
+up_tb.ir[7:0]
+@23
+up_tb.proc.acc[7:0]
+[pattern_trace] 1
+[pattern_trace] 0
